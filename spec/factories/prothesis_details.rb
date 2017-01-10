@@ -1,28 +1,28 @@
 FactoryGirl.define do
   factory :prothesis_detail do
-    prothesis_reason "MyString"
-    prothesis_by "MyString"
-    prothesis_date "2017-01-10"
-    indication "MyString"
-    cup_approach "MyString"
-    cup_brand "MyString"
-    cup_cemented false
-    cup_is_cemented "MyString"
-    cup_not_cemented "MyString"
-    cup_size "MyString"
-    cup_liner "MyString"
-    bone_quality "MyString"
-    bone_paprosky_grade "MyString"
-    bone_pelvic_discontinuity "MyString"
-    stem_cemented false
-    stem_is_cemented "MyString"
-    stem_not_cemented "MyString"
-    stem_fixation "MyString"
-    stem_brand "MyString"
-    stem_size "MyString"
-    stem_length "9.99"
-    taper "MyString"
-    head "MyString"
-    head_size "MyString"
+    prothesis_reason          { Faker::Lorem.word }
+    prothesis_by              { Faker::Name.name }
+    prothesis_date            { Faker::Date.backward(1.year.ago) }
+    indication                { Faker::Lorem.word }
+    cup_approach              { Faker::Lorem.word }
+    cup_brand                 { Faker::Company.name }
+    cup_cemented              { Faker::Boolean.boolean }
+    cup_is_cemented           { Faker::Lorem.word }
+    cup_not_cemented          { Faker::Lorem.word }
+    cup_size                  { Faker::Lorem.word }
+    cup_liner                 { Faker::Lorem.word }
+    bone_quality              { Faker::Lorem.word }
+    bone_paprosky_grade       { Faker::Lorem.word }
+    bone_pelvic_discontinuity { Faker::Lorem.word }
+    stem_cemented             { Faker::Boolean.boolean }
+    stem_is_cemented          { Faker::Lorem.word }
+    stem_not_cemented         { Faker::Lorem.word }
+    stem_fixation             { Faker::Lorem.word }
+    stem_brand                { Faker::Company.name }
+    stem_size                 { Faker::Lorem.word }
+    stem_length               { Faker::Number.decimal(2) }
+    taper                     { Faker::Lorem.word }
+    head                      { Faker::Lorem.word }
+    head_size                 { Faker::Lorem.word }
   end
 end
