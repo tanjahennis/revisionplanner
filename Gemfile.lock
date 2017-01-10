@@ -79,7 +79,7 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faker (1.7.2)
+    faker (1.6.6)
       i18n (~> 0.5)
     ffi (1.9.14)
     globalid (0.3.7)
@@ -213,8 +213,8 @@ DEPENDENCIES
   capybara (~> 2.9, >= 2.9.1)
   coffee-rails (~> 4.2)
   devise
-  factory_girl_rails
-  faker
+  factory_girl_rails (= 4.8.0)
+  faker (= 1.6.6)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
