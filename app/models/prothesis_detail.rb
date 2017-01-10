@@ -1,0 +1,2 @@
+class ProthesisDetail < ApplicationRecord
+end
