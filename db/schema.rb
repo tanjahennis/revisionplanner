@@ -20,13 +20,21 @@ ActiveRecord::Schema.define(version: 20170110152028) do
     t.text     "comorbidities"
     t.text     "medication"
     t.text     "allergies"
-    t.text     "other"
     t.string   "postop_VTE_prophylaxis"
-    t.string   "revision_infection"
     t.string   "representation"
     t.string   "fluoroscopy"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.boolean  "cell_saver"
+    t.boolean  "hdu_bed"
+    t.boolean  "catheter"
+    t.boolean  "central_line_needed"
+    t.text     "infection_micro_organism"
+    t.text     "infection_antibiotics"
+    t.text     "most_recent_crp"
+    t.boolean  "five_samples_microbiology"
+    t.boolean  "frozen_sections"
+    t.boolean  "excise_scar"
   end
 
   create_table "prothesis_details", force: :cascade do |t|

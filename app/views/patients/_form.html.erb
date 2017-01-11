@@ -25,10 +25,10 @@
 
   <div class="input-group">
     <label>Other</label>
-      <p><%= f.check_box :other %> Cell saver</p>
-      <p><%= f.check_box :other %> HDU bed</p>
-      <p><%= f.check_box :other %> Catheter</p>
-      <p><%= f.check_box :other %> Long course of IV ab expected and central line needed</p>
+      <p><%= f.check_box :cell_saver %> Cell saver</p>
+      <p><%= f.check_box :hdu_bed %> HDU bed</p>
+      <p><%= f.check_box :catheter %> Catheter</p>
+      <p><%= f.check_box :central_line_needed %> Long course of IV ab expected and central line needed</p>
   </div>
   <br/>
 
@@ -41,14 +41,14 @@
   <h4>If indication for revision is infection</h4>
   <div class="input-group">
     <label>Infection micro-organism</label>
-      <p><%= f.text_field :revision_infection, placeholder: "micro-organism" %></p>
+      <p><%= f.text_field :infection_micro_organism, placeholder: "micro-organism" %></p>
     <label>On antibiotics</label>
-      <p><%= f.text_field :revision_infection, placeholder: "antibiotics" %> </p>
+      <p><%= f.text_field :infection_antibiotics, placeholder: "antibiotics" %> </p>
     <label>Most recent CRP</label>
-      <p><%= f.text_field :revision_infection, placeholder: "most recent CRP" %></p>
-    <p><%= f.check_box :revision_infection %> 5 samples for microbiology</p>
-    <p><%= f.check_box :revision_infection %> frozen sections</p>
-    <p><%= f.check_box :revision_infection %> excise scar</p>
+      <p><%= f.text_field :most_recent_crp, placeholder: "most recent CRP" %></p>
+    <p><%= f.check_box :five_samples_microbiology %> 5 samples for microbiology</p>
+    <p><%= f.check_box :frozen_sections %> frozen sections</p>
+    <p><%= f.check_box :excise_scar %> excise scar</p>
   </div>
   <br/>
 
