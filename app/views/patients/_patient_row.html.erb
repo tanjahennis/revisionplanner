@@ -1,0 +1,14 @@
+<% @patients.each do |patient| %>
+  <ul id=patient.id>
+    <h4>Patient id <%= patient.id %></h4>
+    <li>Recent surgeries <%= patient.recent_surgeries %></li>
+    <li>Comorbidities <%= patient.comorbidities %></li>
+    <li>medication <%= patient.medication %></li>
+    <li>Allergies <%= patient.allergies %></li>
+    <li>other <%= patient.other %></li>
+    <li>postop_VTE_prophylaxis <%= patient.postop_VTE_prophylaxis %></li>
+    <li>revision_infection <%= patient.revision_infection %></li>
+    <li>representation <%= patient.representation %></li>
+    <li>fluoroscopy <%= patient.fluoroscopy %></li>
+  </ul>
+<% end %>
