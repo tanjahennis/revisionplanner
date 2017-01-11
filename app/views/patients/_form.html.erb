@@ -1,0 +1,73 @@
+<%= form_for @patient do |f| %>
+  <div class="input-group">
+    <label>Recent surgeries</label>
+    <%= f.text_field :recent_surgeries, placeholder: "recent surgeries", class: "form-control" %>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Comorbidities</label>
+    <%= f.text_field :comorbidities, placeholder: "comorbidities", class: "form-control" %>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Medication</label>
+    <%= f.text_field :medication, placeholder: "medication", class: "form-control" %>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Allergies</label>
+    <%= f.text_field :allergies, placeholder: "allergies", class: "form-control" %>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Other</label>
+      <p><%= f.check_box :other %> Cell saver</p>
+      <p><%= f.check_box :other %> HDU bed</p>
+      <p><%= f.check_box :other %> Catheter</p>
+      <p><%= f.check_box :other %> Long course of IV ab expected and central line needed</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Postop VTE prophylaxis</label>
+    <%= f.text_field :postop_VTE_prophylaxis, placeholder: "postop VTE prophylaxis", class: "form-control" %>
+  </div>
+  <br/>
+
+  <h4>If indication for revision is infection</h4>
+  <div class="input-group">
+    <label>Infection micro-organism</label>
+      <p><%= f.text_field :revision_infection, placeholder: "micro-organism" %></p>
+    <label>On antibiotics</label>
+      <p><%= f.text_field :revision_infection, placeholder: "antibiotics" %> </p>
+    <label>Most recent CRP</label>
+      <p><%= f.text_field :revision_infection, placeholder: "most recent CRP" %></p>
+    <p><%= f.check_box :revision_infection %> 5 samples for microbiology</p>
+    <p><%= f.check_box :revision_infection %> frozen sections</p>
+    <p><%= f.check_box :revision_infection %> excise scar</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Representation needed?</label>
+    <%= f.text_field :representation, placeholder: "representation", class: "form-control" %>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Fluoroscopy needed?</label>
+      <p><%= f.radio_button :fluoroscopy, ["yes"] %> yes</p>
+      <p><%= f.radio_button :fluoroscopy, ["no"] %> no</p>
+
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>

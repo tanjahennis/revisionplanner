@@ -9,6 +9,12 @@ class PatientsController < ApplicationController
 
   def create
     @patient = Patient.new(patient_params)
+
+    if @patient.save
+      redirect_to patients_path, notice: "Form submitted"
+    else
+      render :new
+    end
   end
 
   private
