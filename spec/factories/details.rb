@@ -1,0 +1,48 @@
+FactoryGirl.define do
+  factory :detail do
+    prothesis_oa false
+    prothesis_dysplasia false
+    prothesis_avn false
+    prothesis_fracture false
+    prothesis_other "MyString"
+    prothesis_by "MyString"
+    prothesis_date "2017-01-13"
+    indication_infection false
+    indication_wear false
+    indication_mom false
+    indication_pseudotumor false
+    indication_proturism false
+    indication_periprostheticfracture false
+    indication_discolation false
+    indication_stemfracture false
+    indication_other "MyString"
+    approach_posterolateral "MyString"
+    approach_hardinge "MyString"
+    approach_anterolateral "MyString"
+    approach_anterior "MyString"
+    approach_brand "MyString"
+    approach_cemented false
+    approach_cemented_loose "MyString"
+    approach_cemented_wellfixed "MyString"
+    approach_uncemented_screws "MyString"
+    approach_cupsize "MyString"
+    liner_poly "MyString"
+    liner_ceramic "MyString"
+    liner_metal "MyString"
+    acetabularbone_good false
+    acetabularbone_cysts false
+    acetabularbone_migration false
+    paproskygrade "MyString"
+    pelvic_discontinuity_string "MyString"
+    stem_cemented "MyString"
+    stem_fixation_wellfixed "MyString"
+    stem_fixation_loose "MyString"
+    stem_brand "MyString"
+    stem_size "MyString"
+    stem_length "9.99"
+    taper "MyString"
+    taper_other "MyString"
+    head "MyString"
+    head_size "MyString"
+  end
+end
