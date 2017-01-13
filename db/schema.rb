@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170113134321) do
     t.boolean  "indication_pseudotumor"
     t.boolean  "indication_proturism"
     t.boolean  "indication_periprostheticfracture"
-    t.boolean  "indication_discolation"
+    t.boolean  "indication_dislocation"
     t.boolean  "indication_stemfracture"
     t.string   "indication_other"
     t.string   "approach_posterolateral"

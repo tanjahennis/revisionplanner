@@ -1,48 +1,48 @@
 FactoryGirl.define do
   factory :detail do
-    prothesis_oa false
-    prothesis_dysplasia false
-    prothesis_avn false
-    prothesis_fracture false
-    prothesis_other "MyString"
-    prothesis_by "MyString"
-    prothesis_date "2017-01-13"
-    indication_infection false
-    indication_wear false
-    indication_mom false
-    indication_pseudotumor false
-    indication_proturism false
-    indication_periprostheticfracture false
-    indication_discolation false
-    indication_stemfracture false
-    indication_other "MyString"
-    approach_posterolateral "MyString"
-    approach_hardinge "MyString"
-    approach_anterolateral "MyString"
-    approach_anterior "MyString"
-    approach_brand "MyString"
-    approach_cemented false
-    approach_cemented_loose "MyString"
-    approach_cemented_wellfixed "MyString"
-    approach_uncemented_screws "MyString"
-    approach_cupsize "MyString"
-    liner_poly "MyString"
-    liner_ceramic "MyString"
-    liner_metal "MyString"
-    acetabularbone_good false
-    acetabularbone_cysts false
-    acetabularbone_migration false
-    paproskygrade "MyString"
-    pelvic_discontinuity_string "MyString"
-    stem_cemented "MyString"
-    stem_fixation_wellfixed "MyString"
-    stem_fixation_loose "MyString"
-    stem_brand "MyString"
-    stem_size "MyString"
-    stem_length "9.99"
-    taper "MyString"
-    taper_other "MyString"
-    head "MyString"
-    head_size "MyString"
+    prothesis_oa { Faker::Boolean.boolean }
+    prothesis_dysplasia { Faker::Boolean.boolean }
+    prothesis_avn { Faker::Boolean.boolean }
+    prothesis_fracture { Faker::Boolean.boolean }
+    prothesis_other { Faker::Lorem.word }
+    prothesis_by { Faker::Name.name }
+    prothesis_date { Faker::Date.backward(14) }
+    indication_infection { Faker::Boolean.boolean }
+    indication_wear { Faker::Boolean.boolean }
+    indication_mom { Faker::Boolean.boolean }
+    indication_pseudotumor { Faker::Boolean.boolean }
+    indication_proturism { Faker::Boolean.boolean }
+    indication_periprostheticfracture { Faker::Boolean.boolean }
+    indication_dislocation { Faker::Boolean.boolean }
+    indication_stemfracture { Faker::Boolean.boolean }
+    indication_other { Faker::Lorem.word }
+    approach_posterolateral { Faker::Lorem.word }
+    approach_hardinge { Faker::Lorem.word }
+    approach_anterolateral { Faker::Lorem.word }
+    approach_anterior { Faker::Lorem.word }
+    approach_brand { Faker::Lorem.word }
+    approach_cemented { Faker::Boolean.boolean }
+    approach_cemented_loose { Faker::Lorem.word }
+    approach_cemented_wellfixed { Faker::Lorem.word }
+    approach_uncemented_screws { Faker::Lorem.word }
+    approach_cupsize { Faker::Lorem.word }
+    liner_poly { Faker::Lorem.word }
+    liner_ceramic { Faker::Lorem.word }
+    liner_metal { Faker::Lorem.word }
+    acetabularbone_good { Faker::Boolean.boolean }
+    acetabularbone_cysts { Faker::Boolean.boolean }
+    acetabularbone_migration { Faker::Boolean.boolean }
+    paproskygrade { Faker::Lorem.word }
+    pelvic_discontinuity_string { Faker::Lorem.word }
+    stem_cemented { Faker::Lorem.word }
+    stem_fixation_wellfixed { Faker::Lorem.word }
+    stem_fixation_loose { Faker::Lorem.word }
+    stem_brand { Faker::Lorem.word }
+    stem_size { Faker::Lorem.word }
+    stem_length { Faker::Number.decimal(2) }
+    taper { Faker::Lorem.word }
+    taper_other { Faker::Lorem.word }
+    head { Faker::Lorem.word }
+    head_size { Faker::Lorem.word }
   end
 end
