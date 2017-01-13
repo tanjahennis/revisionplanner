@@ -1,3 +1,5 @@
+<%= link_to "Add new details", new_detail_path, class: "btn btn-primary" %>
+
 <% @details.each do |detail| %>
   <li><%= detail.prothesis_date %></li>
 <% end %>
