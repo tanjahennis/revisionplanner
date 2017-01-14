@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170113134321) do
     t.string   "approach_uncemented_screws"
     t.string   "approach_cupsize"
     t.string   "liner"
-    t.boolean  "acetabular_bone_quality"
+    t.string   "acetabular_bone_quality"
     t.string   "paproskygrade"
     t.string   "pelvic_discontinuity"
     t.string   "stem_cemented"

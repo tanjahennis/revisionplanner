@@ -23,7 +23,7 @@ FactoryGirl.define do
     approach_uncemented_screws { Faker::Lorem.word }
     approach_cupsize { Faker::Lorem.word }
     liner { Faker::Lorem.word }
-    acetabular_bone_quality { Faker::Boolean.boolean }
+    acetabular_bone_quality { Faker::Lorem.word }
     paproskygrade { Faker::Lorem.word }
     pelvic_discontinuity { Faker::Lorem.word }
     stem_cemented { Faker::Lorem.word }
