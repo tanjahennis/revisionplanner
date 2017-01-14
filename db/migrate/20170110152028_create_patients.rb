@@ -5,9 +5,17 @@ class CreatePatients < ActiveRecord::Migration[5.0]
       t.text :comorbidities
       t.text :medication
       t.text :allergies
-      t.text :other
+      t.string :cell_saver
+      t.string :hdu_bed
+      t.string :catheter
+      t.string :central_line_needed
       t.string :postop_VTE_prophylaxis
-      t.string :revision_infection
+      t.string :infection_micro_organism
+      t.string :infection_antibiotics
+      t.string :most_recent_crp
+      t.string :five_samples_microbiology
+      t.string :frozen_sections
+      t.string :excise_scar
       t.string :representation
       t.string :fluoroscopy
 
