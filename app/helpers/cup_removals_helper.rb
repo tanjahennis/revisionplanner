@@ -1,0 +1,2 @@
+module CupRemovalsHelper
+end

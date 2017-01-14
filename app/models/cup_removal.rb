@@ -1,0 +1,2 @@
+class CupRemoval < ApplicationRecord
+end
