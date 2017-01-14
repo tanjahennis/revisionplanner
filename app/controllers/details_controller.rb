@@ -10,6 +10,12 @@ class DetailsController < ApplicationController
 
   def create
     @detail = Detail.new(detail_params)
+
+    if @detail.save
+      redirect_to details_path, notice: "Form submitted"
+    else
+      render :new
+    end
   end
 
   private
@@ -29,30 +35,20 @@ class DetailsController < ApplicationController
     :indication_pseudotumor,
     :indication_proturism,
     :indication_periprostheticfracture,
-    :indication_discolation,
+    :indication_dislocation,
     :indication_stemfracture,
     :indication_other,
-    :approach_posterolateral,
-    :approach_hardinge,
-    :approach_anterolateral,
-    :approach_anterior,
+    :approach,
     :approach_brand,
     :approach_cemented,
-    :approach_cemented_loose,
-    :approach_cemented_wellfixed,
     :approach_uncemented_screws,
     :approach_cupsize,
-    :liner_poly,
-    :liner_ceramic,
-    :liner_metal,
-    :acetabularbone_good,
-    :acetabularbone_cysts,
-    :acetabularbone_migration,
+    :liner,
+    :acetabular_bone_quality,
     :paproskygrade,
-    :pelvic_discontinuity_string,
+    :pelvic_discontinuity,
     :stem_cemented,
-    :stem_fixation_wellfixed,
-    :stem_fixation_loose,
+    :stem_fixation,
     :stem_brand,
     :stem_size,
     :stem_length,

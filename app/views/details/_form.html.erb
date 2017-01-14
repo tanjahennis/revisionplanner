@@ -1,0 +1,101 @@
+<%= form_for @detail do |f| %>
+  <div class="input-group">
+    <label>Initial prothesis placed because of:</label>
+      <p><%= f.check_box :prothesis_oa %> OA</p>
+      <p><%= f.check_box :prothesis_dysplasia %> dysplasia</p>
+      <p><%= f.check_box :prothesis_avn %> AVN</p>
+      <p><%= f.check_box :prothesis_fracture %> fracture</p>
+      <p>Other <%= f.text_field :prothesis_other, placeholder: "other", class: "form-control" %></p>
+      <p>Prothesis by <%= f.text_field :prothesis_by, placeholder: "prothesis by", class: "form-control" %></p>
+      <p>Date <%= f.date_field :prothesis_date, class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Indication for revision</label>
+      <p><%= f.check_box :indication_infection %> infection</p>
+      <p><%= f.check_box :indication_wear %> wear</p>
+      <p><%= f.check_box :indication_mom %> mom</p>
+      <p><%= f.check_box :indication_pseudotumor %> pseudotumor</p>
+      <p><%= f.check_box :indication_proturism %> proturism</p>
+      <p><%= f.check_box :indication_periprostheticfracture %> periprostheticfracture</p>
+      <p><%= f.check_box :indication_dislocation %> dislocation</p>
+      <p><%= f.check_box :indication_stemfracture %> stemfracture</p>
+      <p>Other <%= f.text_field :indication_other, placeholder: "other", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Approach used cup</label>
+      <p><%= f.radio_button :approach, ["posterolateral"] %> posterolateral</p>
+      <p><%= f.radio_button :approach, ["Hardinge"] %> Hardinge</p>
+      <p><%= f.radio_button :approach, ["anterolateral"] %> anterolateral</p>
+      <p><%= f.radio_button :approach, ["anterior"] %> anterior</p>
+      <p>Brand <%= f.text_field :approach_brand, placeholder: "brand", class:"form-control" %></p>
+      <p>If cemented</p>
+        <p><%= f.radio_button :approach_cemented, ["loose"] %> loose</p>
+        <p><%= f.radio_button :approach_cemented, ["well fixed"] %> well fixed</p>
+      <p>If screws</p>
+        <p><%= f.radio_button :approach_uncemented_screws, ["yes"] %> yes</p>
+        <p><%= f.radio_button :approach_uncemented_screws, ["no"] %> no</p>
+      <p>Cup size <%= f.text_field :approach_cupsize, placeholder: "cup size", class:"form-control" %></p>
+      <p>Liner</p>
+        <p><%= f.radio_button :liner, ["poly"] %> poly</p>
+        <p><%= f.radio_button :liner, ["ceramic"] %> ceramic</p>
+        <p><%= f.radio_button :liner, ["metal"] %> metal</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Acetabular bone quality</label>
+      <p><%= f.radio_button :acetabular_bone_quality, ["good"] %> good</p>
+      <p><%= f.radio_button :acetabular_bone_quality, ["cysts"] %> cysts</p>
+      <p><%= f.radio_button :acetabular_bone_quality, ["migration"] %> migration</p>
+    <p>Paproskygrade</p>
+      <p><%= f.radio_button :paproskygrade, ["2"] %> 2</p>
+      <p><%= f.radio_button :paproskygrade, ["2A"] %> 2A</p>
+      <p><%= f.radio_button :paproskygrade, ["2B"] %> 2B</p>
+      <p><%= f.radio_button :paproskygrade, ["3"] %> 3</p>
+      <p><%= f.radio_button :paproskygrade, ["3A"] %> 3A</p>
+      <p><%= f.radio_button :paproskygrade, ["3B"] %> 3B</p>
+    <p>Pelvic discontinuity</p>
+      <p><%= f.radio_button :pelvic_discontinuity, ["yes"] %> yes</p>
+      <p><%= f.radio_button :pelvic_discontinuity, ["no"] %> no</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Stem</label>
+      <p><%= f.radio_button :stem_cemented, ["yes"] %> yes</p>
+      <p><%= f.radio_button :stem_cemented, ["no"] %> no</p>
+    <p>Stem fixation in cement</p>
+      <p><%= f.radio_button :stem_fixation, ["well fixed"] %> well fixed</p>
+      <p><%= f.radio_button :stem_fixation, ["loose"] %> loose</p>
+    <p>Brand <%= f.text_field :stem_brand, placeholder: "brand", class:"form-control" %></p>
+    <p>Size <%= f.text_field :stem_size, placeholder: "size", class:"form-control" %></p>
+    <p>Length <%= f.number_field :stem_length, placeholder: "length", class:"form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Taper</label>
+      <p><%= f.radio_button :taper, ["12/14"] %> 12/14</p>
+      <p><%= f.radio_button :taper, ["V40"] %> V40</p>
+      <p>Other <%= f.text_field :taper_other, placeholder: "other", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Head</label>
+      <p><%= f.radio_button :head, ["metal"] %> metal</p>
+      <p><%= f.radio_button :head, ["ceramic"] %> ceramic</p>
+      <p><%= f.radio_button :head, ["TS"] %> TS</p>
+      <p>Size <%= f.text_field :head_size, placeholder: "size", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
