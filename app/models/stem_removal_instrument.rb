@@ -1,0 +1,2 @@
+class StemRemovalInstrument < ApplicationRecord
+end

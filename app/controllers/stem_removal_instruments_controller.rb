@@ -1,0 +1,2 @@
+class StemRemovalInstrumentsController < ApplicationController
+end

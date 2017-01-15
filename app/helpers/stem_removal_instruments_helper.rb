@@ -1,0 +1,2 @@
+module StemRemovalInstrumentsHelper
+end

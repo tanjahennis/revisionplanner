@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114224123) do
+ActiveRecord::Schema.define(version: 20170115130355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,32 @@ ActiveRecord::Schema.define(version: 20170114224123) do
     t.string   "fluoroscopy"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "stem_removal_instruments", force: :cascade do |t|
+    t.string   "femoral_shaft"
+    t.string   "femoral_shaft_other"
+    t.string   "cortex_quality"
+    t.string   "greater_trochanger"
+    t.string   "depth_cement_plug"
+    t.string   "explant_femur"
+    t.boolean  "s_rom_extractor"
+    t.boolean  "corail_extractor"
+    t.string   "extractor_other"
+    t.boolean  "flexible_osteotomes"
+    t.boolean  "highspeed_burr"
+    t.boolean  "long_uide_wire"
+    t.boolean  "cannulated_reamers"
+    t.boolean  "straight_reamers"
+    t.boolean  "k_wires"
+    t.boolean  "drills"
+    t.boolean  "oscar"
+    t.boolean  "cement_backscratchers_grabbers"
+    t.string   "vitalview_boolean"
+    t.boolean  "arthroscope_warmer"
+    t.boolean  "broken_stem_removal_set"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
   create_table "users", force: :cascade do |t|
