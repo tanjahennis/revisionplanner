@@ -16,6 +16,7 @@ class StemImplantInstrumentsController < ApplicationController
   def stem_implant_instrument_params
     params.require(:stem_implant_instrument).permit(
       :aim_for_fit,
+      :stem_cemented,
       :type_stem,
       :stem_brand,
       :stem_size,

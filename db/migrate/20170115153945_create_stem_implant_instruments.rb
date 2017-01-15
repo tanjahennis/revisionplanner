@@ -2,6 +2,7 @@ class CreateStemImplantInstruments < ActiveRecord::Migration[5.0]
   def change
     create_table :stem_implant_instruments do |t|
       t.string :aim_for_fit
+      t.string :stem_cemented
       t.string :type_stem
       t.string :stem_brand
       t.string :stem_size

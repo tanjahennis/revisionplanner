@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :stem_implant_instrument do
     aim_for_fit { Faker::Lorem.word }
+    stem_cemented { Faker:Lorem.word }
     type_stem { Faker::Lorem.word }
     stem_brand { Faker::Lorem.word }
     stem_size { Faker::Lorem.word }

@@ -137,6 +137,7 @@ stem_implant_instruments = []
 5.times do
   stem_implant_instruments << StemImplantInstrument.create(
     aim_for_fit: Faker::Lorem.word,
+    stem_cemented: Faker::Lorem.word,
     type_stem: Faker::Lorem.word,
     stem_brand: Faker::Lorem.word,
     stem_size: Faker::Lorem.word,

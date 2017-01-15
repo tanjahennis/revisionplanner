@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20170115153945) do
 
   create_table "stem_implant_instruments", force: :cascade do |t|
     t.string   "aim_for_fit"
+    t.string   "stem_cemented"
     t.string   "type_stem"
     t.string   "stem_brand"
     t.string   "stem_size"
