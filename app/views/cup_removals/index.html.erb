@@ -1,0 +1,5 @@
+<%= link_to "Add new", new_cup_removal_path, class: "btn btn-primary" %>
+
+<% @cup_removals.each do |instrument| %>
+  <li><%= instrument.explant_cutters %></li>
+<% end %>
