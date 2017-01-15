@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115143906) do
+ActiveRecord::Schema.define(version: 20170115153945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -111,6 +111,25 @@ ActiveRecord::Schema.define(version: 20170115143906) do
     t.string   "fluoroscopy"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "stem_implant_instruments", force: :cascade do |t|
+    t.string   "aim_for_fit"
+    t.string   "type_stem"
+    t.string   "stem_brand"
+    t.string   "stem_size"
+    t.string   "stem_offset"
+    t.string   "cement_type"
+    t.string   "antibiotics"
+    t.boolean  "cement_plug"
+    t.string   "head"
+    t.string   "head_brand"
+    t.boolean  "sleeve_adapter"
+    t.boolean  "dall_milles_wires"
+    t.boolean  "trochanteric_plate"
+    t.boolean  "gentamycin_sponges"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "stem_removal_instruments", force: :cascade do |t|

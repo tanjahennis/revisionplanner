@@ -1,0 +1,2 @@
+class StemImplantInstrument < ApplicationRecord
+end
