@@ -1,0 +1,51 @@
+<%= form_for @stem_implant_instrument do |f| %>
+
+  <div class="input-group">
+    <label>Aim for fit</label>
+      <p><%= f.radio_button :aim_for_fit, ["metaphyseal"] %> metaphyseal</p>
+      <p><%= f.radio_button :aim_for_fit, ["diaphyseal"] %> diaphyseal</p>
+      <p><%= f.radio_button :aim_for_fit, ["cement-in-cement"] %> cement-in-cement</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Type stem</label>
+      <p><%= f.radio_button :stem_cemented, ["yes"] %> yes</p>
+      <p><%= f.radio_button :stem_cemented, ["no"] %> no</p>
+      <p>Brand <%= f.text_field :stem_brand, placeholder: "brand", class: "form-control" %></p>
+      <p>Size <%= f.text_field :stem_size, placeholder: "size", class: "form-control" %></p>
+      <p><%= f.radio_button :type_stem, ["straight"] %> straight</p>
+      <p><%= f.radio_button :type_stem, ["curved"] %> curved</p>
+      <p>Offset <%= f.text_field :stem_offset, placeholder: "offset", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>IF cemented</label>
+      <p>Cement type <%= f.text_field :cement_type, placeholder: "cement type", class: "form-control" %></p>
+      <p>Extra antibiotics <%= f.text_field :antibiotics, placeholder: "antibiotics", class: "form-control" %></p>
+      <p><%= f.check_box :cement_plug %> cement plug</p>
+  </div>
+
+  <div class="input-group">
+    <label>Head</label>
+      <p><%= f.radio_button :head, ["metal"] %> metal</p>
+      <p><%= f.radio_button :head, ["ceramic"] %> ceramic</p>
+      <p><%= f.radio_button :head, ["TS"] %> TS</p>
+      <p>Brand <%= f.text_field :head_brand, placeholder: "brand", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Other stem fixation devices</label>
+      <p><%= f.check_box :sleeve_adapter %> sleeve adapter</p>
+      <p><%= f.check_box :dall_milles_wires %> Dall Milles wires</p>
+      <p><%= f.check_box :trochanteric_plate %> trochanteric plate</p>
+      <p><%= f.check_box :gentamycin_sponges %> gentamycin sponges</p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>

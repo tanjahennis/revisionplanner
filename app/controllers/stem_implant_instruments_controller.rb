@@ -9,6 +9,12 @@ class StemImplantInstrumentsController < ApplicationController
 
   def create
     @stem_implant_instrument = StemImplantInstrument.new(stem_implant_instrument_params)
+
+    if @stem_implant_instrument.save
+      redirect_to stem_implant_instruments_path
+    else
+      render :new
+    end
   end
 
   private
