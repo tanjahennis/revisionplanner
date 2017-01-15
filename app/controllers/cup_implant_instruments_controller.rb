@@ -9,6 +9,12 @@ class CupImplantInstrumentsController < ApplicationController
 
   def create
     @cup_implant_instrument = CupImplantInstrument.new(cup_implant_instrument_params)
+
+    if @cup_implant_instrument.save
+      redirect_to cup_implant_instruments_path, notice: "form submitted"
+    else
+      render :new
+    end
   end
 
   private

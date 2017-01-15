@@ -1,0 +1,44 @@
+<%= form_for @cup_implant_instrument do |f| %>
+  <div class="input-group">
+    <label>Aim for fit</label>
+      <p>press-fit</p>
+      <p><%= f.radio_button :press_fit, ["yes"] %> yes</p>
+      <p><%= f.radio_button :press_fit, ["no"] %> no</p>
+      <p>other<%= f.text_field :press_fit_other, placeholder: "other", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Type cup</label>
+      <p>press-fit</p>
+      <p><%= f.radio_button :type_cup, ["cemented"] %> cemented</p>
+      <p><%= f.radio_button :type_cup, ["uncemented"] %> uncemented</p>
+      <p>brand <%= f.text_field :cup_brand, placeholder: "brand", class: "form-control" %></p>
+      <p>size <%= f.text_field :cup_size, placeholder: "size", class: "form-control" %></p>
+      <p>liner <%= f.text_field :cup_liner, placeholder: "liner", class: "form-control" %></p>
+      <p><%= f.check_box :screws_drill %> screws and drill</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Bone graft needed</label>
+      <p><%= f.check_box :femoral_head %> femoral head</p>
+      <p><%= f.check_box :impaction_bg_instruments %> impaction bone grafting instruments</p>
+      <p><%= f.check_box :bone_mill %> bone mill</p>
+      <p><%= f.check_box :jamshidi_needle %> Jamshidi needle for BM</p>
+      <p><%= f.check_box :mesh %> mesh</p>
+  </div>
+
+  <div class="input-group">
+    <label>Additional fixation devices</label>
+      <p><%= f.check_box :tm_wedges %> TM wedges</p>
+      <p><%= f.check_box :plad %> PLAD</p>
+      <p><%= f.check_box :cupcage %> cupcage</p>
+      <p><%= f.check_box :custom_cage %> custom cage</p>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
