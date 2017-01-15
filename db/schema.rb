@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115130355) do
+ActiveRecord::Schema.define(version: 20170115143906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cup_implant_instruments", force: :cascade do |t|
+    t.string   "press_fit"
+    t.string   "press_fit_other"
+    t.string   "type_cup"
+    t.boolean  "cup_brand"
+    t.boolean  "cup_size"
+    t.boolean  "cup_liner"
+    t.boolean  "screws_drill"
+    t.boolean  "femoral_head"
+    t.boolean  "impaction_bg_instruments"
+    t.boolean  "bone_mill"
+    t.boolean  "jamshidi_needle"
+    t.boolean  "mesh"
+    t.boolean  "tm_wedges"
+    t.boolean  "plad"
+    t.boolean  "cupcage"
+    t.boolean  "custom_cage"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "cup_removals", force: :cascade do |t|
     t.string   "explant_cutters"
