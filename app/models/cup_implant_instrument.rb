@@ -1,0 +1,2 @@
+class CupImplantInstrument < ApplicationRecord
+end

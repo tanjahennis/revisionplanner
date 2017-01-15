@@ -1,0 +1,2 @@
+class CupImplantInstrumentsController < ApplicationController
+end
