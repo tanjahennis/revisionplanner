@@ -1,6 +1,8 @@
 class CreateStemRemovalInstruments < ActiveRecord::Migration[5.0]
   def change
     create_table :stem_removal_instruments do |t|
+      t.string :leg_discrepancy
+      t.decimal :discrepancy_length
       t.string :femoral_shaft
       t.string :femoral_shaft_other
       t.string :cortex_quality

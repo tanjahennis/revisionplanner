@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 20170115153945) do
   end
 
   create_table "stem_removal_instruments", force: :cascade do |t|
+    t.string   "leg_discrepancy"
+    t.decimal  "discrepancy_length"
     t.string   "femoral_shaft"
     t.string   "femoral_shaft_other"
     t.string   "cortex_quality"
