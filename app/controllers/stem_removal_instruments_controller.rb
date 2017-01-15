@@ -10,6 +10,12 @@ class StemRemovalInstrumentsController < ApplicationController
 
   def create
     @stem_removal_instrument = StemRemovalInstrument.new(stem_removal_instrument_params)
+
+    if @stem_removal_instrument.save
+      redirect_to stem_removal_instruments_path, notice: "Form submitted"
+    else
+      render :new
+    end
   end
 
   private

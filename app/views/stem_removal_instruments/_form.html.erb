@@ -1,0 +1,80 @@
+<%= form_for @stem_removal_instrument do |f| %>
+  <div class="input-group">
+    <label>Femoral shaft</label>
+      <p><%= f.radio_button :femoral_shaft, ["straight"] %> straight</p>
+      <p><%= f.radio_button :femoral_shaft, ["curved"] %> curved</p>
+      <label>other</label>
+        <p><%= f.text_field :femoral_shaft_other, placeholder: "other", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Cortex quality</label>
+      <p><%= f.radio_button :cortex_quality, ["good"] %> good</p>
+      <p><%= f.radio_button :cortex_quality, ["thin"] %> thin</p>
+      <p><%= f.radio_button :cortex_quality, ["cortical defects"] %> cortical defects</p>
+      <p><%= f.radio_button :cortex_quality, ["perforation"] %> perforation</p>
+    </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Greater trochanger</label>
+      <p><%= f.radio_button :greater_trochanger, ["good"] %> good</p>
+      <p><%= f.radio_button :greater_trochanger, ["loose"] %> loose</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Depth cement plug</label>
+      <p><%= f.text_field :depth_cement_plug, placeholder: "depth cement plug", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Explant femur</label>
+      <p><%= f.radio_button :explant_femur, ["endofemoral"] %> endofemoral</p>
+      <p><%= f.radio_button :explant_femur, ["extended trochanteric osteotomy"] %> extended trochanteric osteotomy</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Stem extraction tool</label>
+      <p><%= f.check_box :s_rom_extractor %> S-ROM extractor</p>
+      <p><%= f.check_box :corail_extractor %> Corail extractor</p>
+    <label>Other extractor</label>
+      <p><%= f.text_field :extractor_other, placeholder: "Other extractor", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Extraction instruments</label>
+      <p><%= f.check_box :flexible_osteotomes %> Flexible osteotomes</p>
+      <p><%= f.check_box :highspeed_burr %> High speed BURR</p>
+      <p><%= f.check_box :long_uide_wire %> Long uide wire</p>
+      <p><%= f.check_box :cannulated_reamers %> Cannulated reamers</p>
+      <p><%= f.check_box :straight_reamers %> Straight reamers</p>
+      <p><%= f.check_box :k_wires %> K-wires</p>
+      <p><%= f.check_box :drills %> 2.5mm drills</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>IF cemented stem</label>
+      <p><%= f.check_box :oscar %> Oscar</p>
+      <p><%= f.check_box :cement_backscratchers_grabbers %> Cement backscratchers grabbers</p>
+      <p><%= f.check_box :vitalview_boolean %> Enhanced vision VitalView</p>
+      <p><%= f.check_box :arthroscope_warmer %> Arthroscope + warmer</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>IF stem fracture</label>
+      <p><%= f.check_box :broken_stem_removal_set %> broken stem removal set</p>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
