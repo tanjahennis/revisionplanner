@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :details
   resources :cup_removals
   resources :stem_removal_instruments
+  resources :cup_implant_instruments
 end
