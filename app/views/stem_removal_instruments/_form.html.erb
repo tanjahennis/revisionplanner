@@ -1,6 +1,14 @@
 <%= form_for @stem_removal_instrument do |f| %>
   <div class="input-group">
     <label>Femoral shaft</label>
+      <p><%= f.radio_button :leg_discrepancy, ["yes"] %> yes</p>
+      <p><%= f.radio_button :leg_discrepancy, ["no"] %> no</p>
+      <p>Length cm<%= f.number_field :discrepancy_length, class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Femoral shaft</label>
       <p><%= f.radio_button :femoral_shaft, ["straight"] %> straight</p>
       <p><%= f.radio_button :femoral_shaft, ["curved"] %> curved</p>
       <label>other</label>

@@ -85,6 +85,8 @@ end
 stem_removal_instruments = []
 5.times do
   stem_removal_instruments << StemRemovalInstrument.create(
+    leg_discrepancy: Faker::Lorem.word,
+    discrepancy_length: Faker::Number.decimal(2),
     femoral_shaft: Faker::Lorem.word,
     femoral_shaft_other: Faker::Lorem.word,
     cortex_quality: Faker::Lorem.word,

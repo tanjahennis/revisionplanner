@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :stem_removal_instrument do
+    leg_discrepancy { Faker::Lorem.word }
+    discrepancy_length { Faker::Number.decimal(2) }
     femoral_shaft { Faker::Lorem.word }
     femoral_shaft_other { Faker::Lorem.word }
     cortex_quality { Faker::Lorem.word }

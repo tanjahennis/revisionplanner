@@ -22,6 +22,8 @@ class StemRemovalInstrumentsController < ApplicationController
 
   def stem_removal_instrument_params
     params.require(:stem_removal_instrument).permit(
+      :leg_discrepancy,
+      :discrepancy_length,
       :femoral_shaft,
       :femoral_shaft_other,
       :cortex_quality,
