@@ -7,4 +7,6 @@ Rails.application.routes.draw do
 
   resources :patients
   resources :details
+  resources :cup_removals
+  resources :stem_removal_instruments
 end
