@@ -9,6 +9,12 @@ class CupRemovalsController < ApplicationController
 
   def create
     @cup_removal = CupRemoval.new(cup_removal_params)
+
+    if @cup_removal.save
+      redirect_to cup_removals_path, notice: "Form submitted"
+    else
+      render :new
+    end
   end
 
   private

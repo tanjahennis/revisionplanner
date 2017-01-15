@@ -1,0 +1,43 @@
+<%= form_for @cup_removal do |f| %>
+  <div class="input-group">
+    <label>Not cemented - no screws</label>
+      <p>Cup explant cutters size</p>
+      <p><%= f.text_field :explant_cutters, placeholder: "explant cutters size", class: "form-control" %></p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Not cemented - with screws</label>
+      <p>Ceramic liner brand</p>
+      <p><%= f.text_field :ceramic_liner, placeholder: "brand", class: "form-control" %></p>
+      <p><%= f.check_box :ceramic_liner_extractor %> ceramic liner extractor</p>
+
+      <p>Poly liner brand</p>
+      <p><%= f.text_field :poly_liner, placeholder: "brand", class: "form-control" %></p>
+      <p><%= f.check_box :poly_liner_extractor %> poly liner extractor</p>
+      <p><%= f.check_box :drill %> 3.5mm drill</p>
+      <p><%= f.check_box :fragment_screw %> 3.5mm small fragment screw</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Cemented - with screws</label>
+      <p>Broken screw removal set</p>
+      <p><%= f.radio_button :broken_screw_removal_set, ["yes"] %> yes</p>
+      <p><%= f.radio_button :broken_screw_removal_set, ["no"] %> no</p>
+  </div>
+  <br/>
+
+  <div class="input-group">
+    <label>Cemented - no screws</label>
+      <p><%= f.check_box :moreland_extractor %> Moreland extractor</p>
+      <p><%= f.check_box :osteotomes %> osteotomes</p>
+      <p><%= f.check_box :reamers %> reamers</p>
+  </div>
+  <br/>
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+
+<% end %>
