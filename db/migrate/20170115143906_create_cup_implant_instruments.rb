@@ -13,7 +13,7 @@ class CreateCupImplantInstruments < ActiveRecord::Migration[5.0]
       t.boolean :bone_mill
       t.boolean :jamshidi_needle
       t.boolean :mesh
-      t.booelan :tm_wedges
+      t.boolean :tm_wedges
       t.boolean :plad
       t.boolean :cupcage
       t.boolean :custom_cage
