@@ -1,0 +1,5 @@
+<%= link_to "Add new stem removal instruments", new_stem_removal_instrument_path, class: "btn btn-primary" %>
+
+<% @stem_removal_instruments.each do |instrument| %>
+  <li><%= instrument.femoral_shaft %></li>
+<% end %>

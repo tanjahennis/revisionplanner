@@ -38,5 +38,6 @@ class StemRemovalInstrumentsController < ApplicationController
       :arthroscope_warmer,
       :broken_stem_removal_set
     )
+  end
 
 end
