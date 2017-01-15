@@ -1,0 +1,5 @@
+<%= link_to "Add new", new_stem_implant_instrument_path, class: "btn btn-primary" %>
+
+<% @stem_implant_instruments.each do |instrument| %>
+  <li><%= instrument.aim_for_fit %></li>
+<% end %>
