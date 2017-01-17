@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117160702) do
+ActiveRecord::Schema.define(version: 20170117173708) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,26 @@ ActiveRecord::Schema.define(version: 20170117160702) do
     t.string   "head_size"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "operations", force: :cascade do |t|
+    t.date     "date"
+    t.time     "time"
+    t.string   "lead"
+    t.integer  "detail_id"
+    t.integer  "patient_id"
+    t.integer  "cup_implant_instrument_id"
+    t.integer  "cup_removal_id"
+    t.integer  "stem_implant_instrument_id"
+    t.integer  "stem_removal_instrument_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["cup_implant_instrument_id"], name: "index_operations_on_cup_implant_instrument_id", using: :btree
+    t.index ["cup_removal_id"], name: "index_operations_on_cup_removal_id", using: :btree
+    t.index ["detail_id"], name: "index_operations_on_detail_id", using: :btree
+    t.index ["patient_id"], name: "index_operations_on_patient_id", using: :btree
+    t.index ["stem_implant_instrument_id"], name: "index_operations_on_stem_implant_instrument_id", using: :btree
+    t.index ["stem_removal_instrument_id"], name: "index_operations_on_stem_removal_instrument_id", using: :btree
   end
 
   create_table "patients", force: :cascade do |t|
@@ -188,5 +208,11 @@ ActiveRecord::Schema.define(version: 20170117160702) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "operations", "cup_implant_instruments"
+  add_foreign_key "operations", "cup_removals"
+  add_foreign_key "operations", "details"
+  add_foreign_key "operations", "patients"
+  add_foreign_key "operations", "stem_implant_instruments"
+  add_foreign_key "operations", "stem_removal_instruments"
   add_foreign_key "profiles", "users"
 end
