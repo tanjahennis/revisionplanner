@@ -1,0 +1,25 @@
+<%= form_for @profile do |f| %>
+  <% @profile.errors.full_messages.each do |msg| %>
+    <p class="alert alert-danger"><%= msg %></p>
+  <% end %>
+
+  <div class="input-group">
+    <label>First name</label>
+    <%= f.text_field :first_name, placeholder: "first name", class: "form-control" %>
+  </div>
+
+  <div class="input-group">
+    <label>Last name</label>
+    <%= f.text_field :last_name, placeholder: "last name", class: "form-control" %>
+  </div>
+
+  <div class="input-group">
+    <label>Role</label>
+    <%= f.text_field :role, placeholder: "role", class: "form-control" %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
