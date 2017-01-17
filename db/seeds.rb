@@ -155,3 +155,13 @@ stem_implant_instruments = []
     gentamycin_sponges: Faker::Boolean.boolean
   )
 end
+
+# Profiles
+profiles = []
+10.times do
+  profiles << Profile.create(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    role: Faker::Company.profession
+  )
+end
