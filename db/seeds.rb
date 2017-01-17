@@ -165,3 +165,12 @@ profiles = []
     role: Faker::Company.profession
   )
 end
+
+# Users
+users = []
+10.times do
+  users << User.create(
+    email: Faker::Internet.email,
+    password: "secret"
+  )
+end
